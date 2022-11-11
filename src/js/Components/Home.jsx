@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Button } from 'react-daisyui';
 import { Link } from 'react-router-dom';
 
 // import AppContext from '../AppContext';
@@ -11,8 +10,7 @@ function Home() {
 	console.log('%c<Home>', 'color:darkorange');
 
 	// const { user, setUser } = useContext(AppContext);
-	const { currentUser, setCurrentUser } = useAppValue();
-	console.log('currentUser', currentUser);
+	const { currentUser } = useAppValue();
 
 	useEffect(() => {
 		console.log('useEffect(,[]) <Home>');
@@ -24,20 +22,11 @@ function Home() {
 
 	return (
 		<div>
-			<h1>home</h1>
-			<div>
-				<Button
-					type='button'
-					onClick={() => {
-						setCurrentUser((prev) => {
-							return { ...prev, label: 'Home' };
-						});
-					}}>
-					click
-				</Button>
-			</div>
+			<h1 className='p-3 text-xl'>Hello {currentUser && `${currentUser.displayName}`}</h1>
 			<nav>
-				<Link to='/about'>About</Link>
+				<Link className='btn' to='/about'>
+					About
+				</Link>
 			</nav>
 		</div>
 	);

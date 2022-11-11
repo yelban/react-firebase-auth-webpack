@@ -79,6 +79,7 @@
 		"core-js": "^3.26.0",
 		"daisyui": "^2.39.1",
 		"es6-promise-promise": "^1.0.0",
+		"firebase": "^9.14.0",
 		"react": "^18.2.0",
 		"react-daisyui": "^2.4.6",
 		"react-dom": "^18.2.0",
