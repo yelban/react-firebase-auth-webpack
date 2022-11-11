@@ -1,2 +1,1 @@
-# React Webpack Boilerplate
-
+# React Webpack Boilerplate with Firebase Authentication
